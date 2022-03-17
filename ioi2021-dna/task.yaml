@@ -1,0 +1,63 @@
+---
+extends: ../base-batch.yaml
+
+name: DNA
+long_name: Mutating DNA
+
+statements:
+  de: statement/dna-de.pdf
+  en: statement/dna-en.pdf
+attachments:
+  dna.zip: attachment/dna.zip
+
+time_limit: 1.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 21
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 22
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 13
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 28
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 16
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/dna.h
+
+test_submissions:
+  solution/model_solution/full-prefix.cpp: 100
+  solution/correct/at-no-prefix.cpp: 22
+  solution/correct/atc-prefix.cpp: 100
+  solution/correct/full-fenwick.cpp: 100
+  solution/correct/full-jonathanirvings.cpp: 100
+  solution/correct/no-prefix.cpp: 71
+  solution/incorrect/at-prefix.cpp: 35
+  solution/incorrect/wa-jonathanirvings.cpp: 35
