@@ -1,0 +1,109 @@
+---
+extends: ../base-batch.yaml
+
+name: PARKS
+long_name: Fountain Parks
+
+statements:
+  de: statement/parks-de.pdf
+  en: statement/parks-en.pdf
+attachments:
+  parks.zip: attachment/parks.zip
+
+time_limit: 3.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 5
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/f2-*.in.gz
+      output: tc/f2-*.out.gz
+  - points: 15
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/f2-*.in.gz
+      output: tc/f2-*.out.gz
+    - input: tc/f3-*.in.gz
+      output: tc/f3-*.out.gz
+    - input: tc/ns3-*.in.gz
+      output: tc/ns3-*.out.gz
+  - points: 20
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/f2-*.in.gz
+      output: tc/f2-*.out.gz
+    - input: tc/f3-*.in.gz
+      output: tc/f3-*.out.gz
+  - points: 20
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+    - input: tc/f2-*.in.gz
+      output: tc/f2-*.out.gz
+    - input: tc/f3-*.in.gz
+      output: tc/f3-*.out.gz
+    - input: tc/ns3-*.in.gz
+      output: tc/ns3-*.out.gz
+  - points: 30
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/parks.h
+
+test_submissions:
+  solution/model_solution/model-solution.cpp: 100
+  solution/correct/full-chessboard-adj-kian.cpp: 100
+  solution/correct/full-chessboard-hash-1dim-kian.cpp: 100
+  solution/correct/full-chessboard-hash-boost-kian.cpp: 100
+  solution/correct/full-chessboard-map-kian.cpp: 100
+  solution/correct/full-prabowo.cpp: 100
+  solution/failed/jonathanirvings_three-column.cpp: 30
+  solution/failed/jonathanirvings_three-column_wa.cpp: 5
+  solution/incorrect/2SAT-kian.cpp: 55
+  solution/incorrect/arbitrary-remove-duplicate-prabowo.cpp: 55
+  solution/incorrect/bad-behaviors.cpp: 5
+  solution/incorrect/forest.cpp: 45
+  solution/incorrect/jonathanirvings_nosquare.cpp: 45
+  solution/incorrect/matching-kian.cpp: 55
+  solution/incorrect/nosquare.cpp: 45
+  solution/incorrect/one-column.cpp: 5
+  solution/incorrect/two-column.cpp: 15
+  solution/time_limit/full-chessboard-hash-xor-kian.cpp: 30
