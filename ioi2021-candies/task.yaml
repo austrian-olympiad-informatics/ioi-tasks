@@ -1,0 +1,68 @@
+---
+extends: ../base-batch.yaml
+
+name: CANDIES
+long_name: Distributing Candies
+
+statements:
+  de: statement/candies-de.pdf
+  en: statement/candies-en.pdf
+attachments:
+  candies.zip: attachment/candies.zip
+
+time_limit: 4.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 3
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 8
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 27
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 29
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 33
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/candies.h
+
+test_submissions:
+  solution/model_solution/nlog.cpp: 100
+  solution/correct/candies_fast.cpp: 100
+  solution/correct/candies.cpp: 100
+  solution/correct/candies2_fast.cpp: 100
+  solution/correct/candies2.cpp: 100
+  solution/correct/full-prabowo.cpp: 100
+  solution/correct/nlog2.cpp: 100
+  solution/correct/sqrt-prabowo.cpp: 100
+  solution/incorrect/increase-prefix-sum.cpp: 8
+  solution/incorrect/increase-segtree.cpp: 8
+  solution/incorrect/overflow-prabowo.cpp: 0
+  solution/incorrect/same-capacity.cpp: 27
+  solution/incorrect/whole-range-segtree.cpp: 29
+  solution/incorrect/whole-range.cpp: 29
+  solution/time_limit/brute.cpp: 3
+  solution/time_limit/linear-suffix-prabowo.cpp: 3
+  solution/time_limit/scam.cpp: 3
