@@ -1,0 +1,70 @@
+---
+extends: ../base-batch.yaml
+
+name: DUNGEONS
+long_name: Dungeons Game
+
+statements:
+  de: statement/dungeons-de.pdf
+  en: statement/dungeons-en.pdf
+attachments:
+  dungeons.zip: attachment/dungeons.zip
+
+time_limit: 4.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 26
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 13
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 12
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 27
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/dungeons.h
+
+test_submissions:
+  solution/model_solution/yanhao-full.cpp: 100
