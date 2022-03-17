@@ -1,0 +1,71 @@
+---
+extends: ../base-batch.yaml
+
+name: REGISTERS
+long_name: Bit Shift Registers
+
+statements:
+  de: statement/registers-de.pdf
+  en: statement/registers-en.pdf
+attachments:
+  registers.zip: attachment/registers.zip
+
+time_limit: 1.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 12
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 25
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 13
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 29
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/registers.h
+
+test_submissions:
+  solution/model_solution/model-solution.cpp: 100
+  solution/correct/prabowo_min.cpp: 58
+  solution/correct/prabowo_sort.cpp: 100
+  solution/correct/st4.cpp: 58
+  solution/correct/stress_add.cpp: 100
+  solution/correct/stress_store.cpp: 100
+  solution/failed/bad-behaviors.cpp: 0
+  solution/incorrect/jonathanirvings_min-linear.cpp: 33
+  solution/incorrect/jonathanirvings_min-wa.cpp: 22
+  solution/incorrect/jonathanirvings_min.cpp: 58
+  solution/incorrect/jonathanirvings_single-min-expensive.cpp: 10
+  solution/incorrect/jonathanirvings_single-min.cpp: 21
+  solution/incorrect/prabowo_min_wa.cpp: 21
+  solution/incorrect/st2.cpp: 21
