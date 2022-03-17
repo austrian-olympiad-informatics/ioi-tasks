@@ -1,0 +1,88 @@
+---
+extends: ../base-batch.yaml
+
+name: KEYS
+long_name: Keys
+
+statements:
+  de: statement/keys-de.pdf
+  en: statement/keys-en.pdf
+attachments:
+  keys.zip: attachment/keys.zip
+
+time_limit: 2.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 9
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 17
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 30
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 33
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/keys.h
+
+test_submissions:
+  solution/model_solution/solution_benson.cpp: 100
+  solution/correct/mlog2n_kian.cpp: 67
+  solution/correct/mlogn_kian.cpp: 67
+  solution/correct/nm_bounded_kian.cpp: 37
+  solution/correct/nm_kian.cpp: 37
+  solution/correct/solution_prabowo.cpp: 100
+  solution/correct/solution_wrong_random.cpp: 67
+  solution/correct/solution_yanhao.cpp: 67
+  solution/correct/solution_yanhao_large_degree.cpp: 67
+  solution/correct/solution_yanhao_nm.cpp: 37
+  solution/correct/solution_yanhao_randomized.cpp: 100
+  solution/correct/solution_yanhao_randomized_fast.cpp: 100
+  solution/correct/tle_prabowo_bug.cpp: 67
+  solution/incorrect/solution_author_mk.cpp: 39
+  solution/incorrect/solution_author_modified.cpp: 39
+  solution/incorrect/solution_mk.cpp: 39
+  solution/incorrect/solution_mk_bitset.cpp: 39
+  solution/incorrect/solution_mk_relax.cpp: 9
+  solution/incorrect/solution_mk_slow.cpp: 9
+  solution/incorrect/solution_one-key-bug.cpp: 0
+  solution/incorrect/solution_one-key.cpp: 9
+  solution/time_limit/solution_nm2_bruteforce.cpp: 20
+  solution/time_limit/solution_nmk_jonathanirvings.cpp: 20
+  solution/time_limit/solution_reverse_search.cpp: 37
+  solution/time_limit_and_runtime_error/scc-spam.cpp: 37
