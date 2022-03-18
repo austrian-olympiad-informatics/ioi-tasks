@@ -1,0 +1,75 @@
+@subtask samples
+manual 1.in
+
+@subtask smallTotalSum
+@include samples
+manual 2.in
+manual 5.in
+gen-trivial 10 100 1000
+gen-random 5 10 -1 100000 0 1
+gen-random 5 10 -1 100000 1 1
+gen-random 10 10 -1 100000 0 1
+gen-random 10 10 -1 100000 1 1
+gen-random 10 10 -1 100000 0 1
+gen-random 16 10 -1 100000 1 1
+gen-random 16 10 -1 100000 0 2
+gen-random 16 10 -1 100000 1 2
+gen-smallTotalSum 4 10
+gen-smallTotalSum 9 10
+gen-smallTotalSum 101 10
+
+@subtask oneX
+manual 2.in
+manual 3.in
+gen-trivial 10 1 1000000000000000000
+gen-random 10 10 -1 -1 0 0
+gen-random 20 10 -1 -1 0 0
+gen-random 60 10 -1 -1 0 0
+gen-random 60 10 -1 -1 1 0
+gen-random 60 10 -1 -1 2 0
+gen-oneX 10 58
+
+@subtask smallX
+@include oneX
+@include samples
+manual 4.in
+gen-trivial 10 10000 10000000000
+gen-trivial 10 10000 100000000000000
+gen-random 20 10 10000 -1 0 1
+gen-random 20 10 10000 -1 0 1
+gen-random 60 10 10000 -1 0 1
+gen-random 60 10 10000 -1 1 1
+gen-random 60 10 10000 -1 0 2
+gen-random 60 10 10000 -1 1 2
+gen-yh 13 10
+gen-yh 135 10
+gen-yh 1357 10
+gen-yh 9875 10
+
+@subtask smallAnswer
+@include smallTotalSum
+gen-trivial 1000 10000000 200000
+gen-smallAns-lk 1000 2.0
+gen-smallAns-lk 1000 1.95
+gen-smallAns-lk 1000 1.9
+gen-smallAns-lk 1000 1.85
+gen-smallAns-yh 123455 1000 16 200000
+gen-smallAns-yh 323455 1000 17 200000
+gen-smallAns-yh 623455 1000 18 200000
+gen-smallAns-yh 1234567 1000 19 200000
+gen-smallAns-yh 12345678 1000 23 200000
+
+@subtask full
+@include smallAnswer
+@include smallX
+gen-trivial 1000 1000000000 1000000000
+gen-random 60 1000 -1 -1 0 1
+gen-random 60 1000 -1 -1 1 1
+gen-random 60 1000 -1 -1 2 1
+gen-random 60 1000 -1 -1 0 2
+gen-random 60 1000 -1 -1 1 2
+gen-random 60 1000 -1 -1 2 2
+gen-yh 123457 1000
+gen-yh 1234567 1000
+gen-yh 12345679 1000
+gen-yh 123456789 1000

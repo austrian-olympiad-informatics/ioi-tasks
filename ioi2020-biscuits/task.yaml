@@ -1,0 +1,71 @@
+---
+extends: ../base-batch.yaml
+
+name: BISCUITS
+long_name: Packing Biscuits
+
+statements:
+  de: statement/biscuits-de.pdf
+  en: statement/biscuits-en.pdf
+
+attachments:
+  biscuits.zip: !zip attachment/*
+
+time_limit: 1.0s
+memory_limit: 2048MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 9
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 12
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 21
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 35
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 23
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/grader.java
+  - grader/biscuits.h
+
+test_submissions:
+  solution/biscuits-likai-ac.cpp: 100
+  solution/biscuits-yanhao-ac.cpp: 100
+  # solution/biscuits-yanhao-ac.java: 100
+  solution/biscuits-yanhao-ac_bottom_up.cpp: 100
+  # solution/biscuits-yanhao-ac_bottom_up.java: 100
+  solution/biscuits-yanhao-oneX.cpp: 12
+  # solution/biscuits-yanhao-oneX.java: 100
+  solution/biscuits-yanhao-restrict.cpp: 100
+  solution/biscuits-yanhao-scam2.cpp: 33
+  solution/biscuits-yanhao-scam3.cpp: 0
+  solution/biscuits-yanhao-smallAns.cpp: 44
+  # solution/biscuits-yanhao-smallAns.java: 100
+  solution/biscuits-yanhao-smallAns_scam1.cpp: 9
+  solution/biscuits-yanhao-smallAns_scam2.cpp: 9
+  solution/biscuits-yanhao-smallTotalSum.cpp: 9
+  # solution/biscuits-yanhao-smallTotalSum.java: 100
+  solution/biscuits-yanhao-smallX_bottom_up.cpp: 33
+  # solution/biscuits-yanhao-smallX_bottom_up.java: 100
+  solution/biscuits-yanhao-smallX_top_down.cpp: 33
+  # solution/biscuits-yanhao-smallX_top_down.java: 100
+  solution/return-one.cpp: 0
