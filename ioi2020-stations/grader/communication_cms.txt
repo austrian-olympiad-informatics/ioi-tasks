@@ -1,0 +1,51 @@
+
+
+CMS TC-input --stdin--> manager --stdout--> checker --score--> CMS
+
+
+manager --stdin--> grader-1 --stdout--> manager
+manager --stdin--> grader-2 --stdout--> manager
+...
+
+
+
+MRT (encode decode)
+1. TC-input contains tree + query
+2. Manager reads entire input
+3. Manager sends tree one by one to grader-1 (encoder)
+4. grader-1 (encoder) reads from fin
+5. grader-1 (encoder) will call encode(tree) repeatedly
+6. grader-1 (encoder) will send the mappings back to manager by fout one by one
+7. grader-1 can 'return 0'
+8. Manager post-processes the encoded message
+8a. If encoded message violates constraints, send -1 to grader-2
+8b. Otherwise, Manager sends query one by one to grader-2 (decoder)
+9. grader-2 (decoder) reads from fin
+9a. if receive '-1', return 0
+9b. if receive actual query, continue
+10. grader-2 (decoder) calls decode(source, neighbours, dest) repeatedly
+11. grader-2 (decoder) sends answer back to manager by fout one by one
+12. grader-2 return 0
+13. Manager post-processes the answer and outputs score
+
+TODO:
+- if grader-1 crash, what does manager see / cms / grader-2 see
+
+fprintf(grader1, "%s", "Hello");
+if (fscanf(grader1, "%s", s) == 1) {
+	// got input
+} else {
+	// grader-1 closed stream (maybe died)
+}
+
+py_compile.sh ans.py
+python3 ans.py
+
+manager does not add to runtime
+ return (dict): the merged statistics, using the following algorithm:
+        * execution times are added;
+        * memory usages are added (if concurrent) or max'd (if not);
+        * wall clock times are max'd (if concurrent) or added (if not);
+        * exit_status and related values (signal) are from the first non-OK,
+            if present, or OK;
+        * stdout and stderr, if present, are joined with a separator line.

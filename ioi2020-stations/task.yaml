@@ -1,0 +1,81 @@
+---
+extends: ../base-batch.yaml
+
+name: STATIONS
+long_name: Stations
+
+statements:
+  de: statement/stations-de.pdf
+  en: statement/stations-en.pdf
+
+score_options:
+  decimal_places: 2
+
+attachments:
+  stations.zip: !zip attachment/*
+
+time_limit: 1.0s
+memory_limit: 2048MiB
+
+task_type:
+  type: COMMUNICATION
+  num_processes: 2
+  manager: !cppcompile grader/manager.cpp
+  user_io: fifo_io
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 5
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 8
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 16
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 61
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+
+grader:
+  - grader/stub.cpp
+  - grader/stub.java
+  - grader/stations.h
+
+test_submissions:
+  solution/bad-behavior-die-fast1.cpp: 0
+  solution/bad-behavior-die-fast2.cpp: 0
+  solution/bad-behavior-duplicate-labels.cpp: 0
+  solution/bad-behavior-wrong-label-values.cpp: 0
+  solution/bad-behavior-wrong-labels-len.cpp: 0
+  solution/chuanyu-exponential.cpp: 10
+  solution/felix-ac.cpp: 100
+  solution/raymond-ac.cpp: 100
+  solution/william-2n.cpp: 76.00
+  # solution/william-2n.java: 100
+  solution/william-ac.cpp: 100
+  # solution/william-ac.java: 100
+  solution/william-binary-tree.cpp: 8
+  # solution/william-binary-tree.java: 100
+  solution/william-exponential.cpp: 10
+  # solution/william-exponential.java: 100
+  solution/william-line.cpp: 5
+  # solution/william-line.java: 100
+  solution/william-n2.cpp: 52.32
+  # solution/william-n2.java: 100
+  solution/william-star.cpp: 16
+  # solution/william-star.java: 100
+  solution/zichun-2n.cpp: 76.00
+  solution/zichun-partial.cpp: 33.68
