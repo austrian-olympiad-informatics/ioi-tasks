@@ -1,0 +1,68 @@
+---
+extends: ../base-batch.yaml
+
+name: SUPERTREES
+long_name: Connecting Supertrees
+
+statements:
+  de: statement/supertrees-de.pdf
+  en: statement/supertrees-en.pdf
+
+attachments:
+  supertrees.zip: !zip attachment/*
+
+time_limit: 1.0s
+memory_limit: 2048MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 19
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 35
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 21
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 4
+    testcases:
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/grader.java
+  - grader/supertrees.h
+
+test_submissions:
+  solution/bad-behavior.cpp: 0
+  # solution/bad-behavior.java: 100
+  solution/limli-always-possible-st4.cpp: 50
+  solution/limli-full.cpp: 100
+  solution/limli-line-st1.cpp: 11
+  solution/limli-many-circle-st3.cpp: 0
+  solution/limli-many-forest-st1-2.cpp: 25
+  solution/return-zeros.cpp: 0
+  # solution/yanhao-full.java: 100
+  # solution/yanhao-st1.java: 100
+  # solution/yanhao-st2.java: 100
+  # solution/yanhao-st3.java: 100
+  # solution/yanhao-st4.java: 100
+  # solution/yanhao-st5.java: 100
