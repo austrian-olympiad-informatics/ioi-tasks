@@ -1,0 +1,86 @@
+---
+extends: ../base-batch.yaml
+
+name: PLANTS
+long_name: Comparing Plants
+
+statements:
+  de: statement/plants-de.pdf
+  en: statement/plants-en.pdf
+
+attachments:
+  plants.zip: !zip attachment/*
+
+time_limit: 4.0s
+memory_limit: 2048MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 5
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 14
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 13
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 17
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 15
+    testcases:
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+  - points: 25
+    testcases:
+    - input: tc/7-*.in.gz
+      output: tc/7-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/grader.java
+  - grader/plants.h
+
+test_submissions:
+  solution/plants-original-ac.cpp: 100
+  solution/plants-return_zero.cpp: 0
+  # solution/plants-yanhao-2k.java: 100
+  solution/plants-yanhao-ac.cpp: 100
+  # solution/plants-yanhao-ac.java: 100
+  solution/plants-yanhao-always_comparable.cpp: 44
+  # solution/plants-yanhao-always_comparable.java: 100
+  solution/plants-yanhao-bfs.cpp: 15
+  # solution/plants-yanhao-bfs.java: 100
+  solution/plants-yanhao-dfs.cpp: 15
+  # solution/plants-yanhao-dfs.java: 100
+  solution/plants-yanhao-flyod_warshall.cpp: 11
+  # solution/plants-yanhao-flyod_warshall.java: 100
+  solution/plants-yanhao-k_large.cpp: 14
+  # solution/plants-yanhao-k_large.java: 100
+  solution/plants-yanhao-k_large_segtree.cpp: 27
+  # solution/plants-yanhao-k_large_segtree.java: 100
+  solution/plants-yanhao-many_permutations.cpp: 25
+  solution/plants-yanhao-mountain_valley.cpp: 5
+  # solution/plants-yanhao-mountain_valley.java: 100
+  solution/plants-yanhao-naive_pull.cpp: 27
+  solution/plants-yanhao-no_2k.cpp: 25
+  solution/plants-yanhao-optimized.cpp: 100
+  solution/plants-yanhao-postorder.cpp: 100
+  solution/plants-yanhao-scam.cpp: 0
+  solution/plants-yanhao-sqrt.cpp: 87
+  solution/plants-yanhao-sqrt_opt.cpp: 87
+  solution/plants-yanhao-st5_alt.cpp: 11
