@@ -1,0 +1,57 @@
+Manager >
+Grader  <
+
+> n
+
+< 'Q' k x[0] x[1] ... x[k-1]
+> y
+< 'Q' k x[0] x[1] ... x[k-1]
+> y
+.
+.
+.
+
+On wrong query detected in manager:
+< 'Q' k x[0] x[1] ... x[k-1]
+> -1
+Then, both should exit(0).
+
+On wrong query detected in grader:
+< 'W' 'reason'
+No response from manager.
+Then, both should exit(0).
+
+For final solution answer:
+< 'A' answer
+No response from manager.
+Then, both should exit(0).
+
+
+Grader:
+argv[1]: FIFO (manager to grader)
+argv[2]: FIFO (grader to manager)
+
+Manager:
+argv[1]: FIFO (grader to manager)
+argv[2]: FIFO (manager to grader)
+argv[3]: Manager log file
+cin     Input
+cout    Score
+cerr    Contestant message
+
+
+Manager log:
+strategy
+strategy-info (taken from strategy)
+n
+'Q' k x[0] x[1] ... x[k-1]
+y
+'Q' k x[0] x[1] ... x[k-1]
+y
+...
+'Q' k x[0] x[1] ... x[k-1]      OR     'W' 'reason'              OR   'N' (no more input)
+y         OR     -1             OR     (empty line for 'W', 'N')
+'A' answer                      OR     'NA'
+species[0] species[n] ... species[n-1] (taken from strategy)
+OK or WA or FAIL (check for correctness of answer and query responses)
+reason (if any)

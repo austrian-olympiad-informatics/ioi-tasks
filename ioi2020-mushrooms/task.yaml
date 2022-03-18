@@ -1,0 +1,67 @@
+---
+extends: ../base-batch.yaml
+
+name: MUSHROOMS
+long_name: Counting Mushrooms
+
+statements:
+  de: statement/mushrooms-de.pdf
+  en: statement/mushrooms-en.pdf
+
+attachments:
+  mushrooms.zip: !zip attachment/*
+
+score_options:
+  decimal_places: 2
+
+time_limit: 2.0s
+memory_limit: 1024MiB
+
+task_type:
+  type: COMMUNICATION
+  num_processes: 1
+  manager: !cppcompile grader/manager.cpp
+  user_io: fifo_io
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 100
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+grader:
+  - grader/stub.cpp
+  - grader/stub.java
+  - grader/stub.py
+  - grader/mushrooms.h
+
+test_submissions:
+  solution/decision-tree-endagorion.cpp: 100
+  # solution/decision-tree-endagorion.java: 100
+  solution/mixed-dynamic-phases-kian.cpp: 92.24
+  # solution/mixed-dynamic-phases-kian.java: 100
+  solution/mixed-fixed-phases-dectree-randomized-liti.cpp: 100
+  solution/mixed-fixed-phases-kian.cpp: 92.24
+  # solution/mixed-fixed-phases-kian.java: 100
+  solution/mixed-fixed-phases-liti.cpp: 92.62
+  solution/parallel-one-by-one-divnconq.cpp: 0
+  # solution/parallel-one-by-one-divnconq.java: 100
+  solution/parallel-one-by-one-linear.cpp: 0
+  # solution/parallel-one-by-one-linear.java: 100
+  solution/separate-dynamic-phases-kian.cpp: 80.43
+  # solution/separate-dynamic-phases-kian.java: 100
+  solution/separate-fixed-phases-kian.cpp: 80.43
+  # solution/separate-fixed-phases-kian.java: 100
+  solution/trivial-one-by-one.cpp: 10
+  # solution/trivial-one-by-one.java: 100
+  solution/two-by-one-counts-kian.cpp: 25
+  # solution/two-by-one-counts-kian.java: 100
+  solution/two-by-one-liti.cpp: 25
+  solution/two-by-one-types-kian.cpp: 25
+  # solution/two-by-one-types-kian.java: 100
+  solution/two-phase-detect-then-count-randomized.cpp: 80.14
+  solution/two-phase-detect-then-count.cpp: 80.14

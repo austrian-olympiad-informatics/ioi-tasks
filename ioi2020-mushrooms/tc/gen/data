@@ -1,0 +1,102 @@
+@subtask samples
+manual sample-1.in
+manual sample-2.in
+
+# Small corner cases
+@testset n2
+plain-direct 00
+plain-direct 01
+@testset n3
+plain-direct 000
+plain-direct 001
+plain-direct 010
+plain-direct 011
+@testset n4
+plain-direct 0000
+plain-direct 0001
+plain-direct 0010
+plain-direct 0011
+plain-direct 0100
+plain-direct 0101
+plain-direct 0110
+plain-direct 0111
+@testset n5
+plain-direct 00000
+plain-direct 00001
+plain-direct 00010
+plain-direct 00011
+plain-direct 00100
+plain-direct 00101
+plain-direct 00110
+plain-direct 00111
+plain-direct 01000
+plain-direct 01001
+plain-direct 01010
+plain-direct 01011
+plain-direct 01100
+plain-direct 01101
+plain-direct 01110
+plain-direct 01111
+
+@subtask main
+@include samples
+@include n2 n3 n4 n5
+plain-random    10     6  sdfksjf
+plain-random    20    12  sdfksjfsdf
+plain-random   200   137  abc
+plain-random  2000   891  abcd
+plain-random 20000    19  abcdef
+plain-random 20000   175  abcdefhi
+plain-random 20000  1234  salam
+plain-random 20000  6543  khubi
+plain-random 20000  9876  chetori
+plain-random 20000 13345  hola
+plain-random 20000 18692  como
+adversary simple_random 10000 10
+adversary simple_random 19999 20
+adversary simple_random 20000 30
+adversary balanced_random 10000 0.3 10
+adversary balanced_random 19999 0.1 20
+adversary balanced_random 19999 0.5 25
+adversary balanced_random 19999 0.7 30
+adversary balanced_random 20000 0.4 40
+adversary balanced_random 20000 0.5 45
+adversary balanced_random 20000 0.8 50
+adversary small_equal 10000 4 0 55
+adversary small_equal 20000 1 1 56
+adversary small_equal 20000 1 0 57
+adversary small_equal 19999 1 1 61
+adversary small_equal 20000 1 0 62
+adversary small_equal 19999 2 1 63
+adversary small_equal 20000 2 0 64
+adversary small_equal 20000 2 1 65
+adversary small_equal 20000 2 0 66
+adversary small_equal 19999 3 1 70
+adversary small_equal 20000 3 1 75
+adversary small_equal 20000 3 0 80
+adversary small_equal 20000 3 0 85
+adversary small_equal 19999 4 1 90
+adversary small_equal 20000 4 1 95
+adversary small_equal 20000 4 0 100
+adversary small_equal 20000 4 0 105
+adversary small_equal 19999 5 1 110
+adversary small_equal 20000 5 1 115
+adversary small_equal 20000 5 0 120
+adversary small_equal 20000 5 1 130
+adversary small_equal 20000 5 0 140
+adversary small_equal 20000 6 1 150
+adversary small_equal 20000 6 0 152
+adversary small_equal 20000 6 0 153
+adversary small_equal 20000 6 0 154
+adversary small_equal 20000 6 0 155
+adversary small_equal 20000 6 0 156
+adversary small_equal 20000 6 0 157
+adversary small_equal 20000 6 0 158
+adversary small_equal 20000 6 0 159
+adversary small_equal 20000 6 0 160
+adversary small_equal 20000 6 1 161
+adversary small_equal 20000 6 0 162
+adversary small_equal 20000 6 1 170
+adversary small_equal 20000 6 0 180
+adversary small_equal 20000 7 1 190
+adversary small_equal 20000 7 0 200
