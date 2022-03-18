@@ -1,0 +1,89 @@
+---
+extends: ../base-batch.yaml
+
+name: TICKETS
+long_name: Carnival Tickets
+
+statements:
+  de: statement/tickets-de.pdf
+  en: statement/tickets-en.pdf
+
+attachments:
+  tickets.zip: !zip attachment/*
+
+time_limit: 2.0s
+memory_limit: 2048MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 16
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 14
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 14
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 12
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 23
+    testcases:
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/7-*.in.gz
+      output: tc/7-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/grader.java
+  - grader/tickets.h
+
+test_submissions:
+  solution/bad-behaviour.cpp: 0
+  solution/huajun-scam.cpp: 27
+  solution/limli-greedy-ends.cpp: 27
+  solution/limli-greedy-sum.cpp: 25
+  solution/many-call.cpp: 0
+  # solution/many-call.java: 100
+  solution/no-call.cpp: 0
+  # solution/no-call.java: 100
+  # solution/return-zeros.java: 100
+  solution/sy-calc-median.cpp: 11
+  solution/sy-full.cpp: 100
+  solution/sy-one-day-sort.cpp: 27
+  solution/wrong-dim.cpp: 0
+  # solution/wrong-dim.java: 100
+  solution/wy-full.cpp: 100
+  solution/wy-subtask1.cpp: 11
+  # solution/wy-subtask1.java: 100
+  solution/wy-subtask2.cpp: 27
+  # solution/wy-subtask2.java: 100
+  solution/wy-subtask3.cpp: 14
+  # solution/wy-subtask3.java: 100
+  solution/wy-subtask4.cpp: 25
+  # solution/wy-subtask4.java: 100
+  solution/wy-subtask5.cpp: 12
+  # solution/wy-subtask5.java: 100
+  solution/wy-subtask6.cpp: 62
+  # solution/wy-subtask6.java: 100
+  # solution/yanhao-full.java: 100
+  solution/yanhao-maxflow.cpp: 100
+  solution/yanhao-push_relabel.cpp: 100
+  solution/yanhao-scam.cpp: 11
