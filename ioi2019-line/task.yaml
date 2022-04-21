@@ -1,0 +1,49 @@
+---
+extends: ../base-batch.yaml
+
+name: LINE
+long_name: Broken Line
+
+statements:
+  de: statement/line-de.pdf
+  en: statement/line-en.pdf
+
+attachments:
+  line.zip: !zip attachment/line.zip
+
+task_type: OUTPUT_ONLY
+
+time_limit: 10.0s
+memory_limit: 256MiB
+
+score_options:
+  decimal_places: 2
+  type: SUM
+
+subtasks:
+  - points: 10
+    testcases:
+    - input: tc/01.in.gz
+      output: tc/01.out.gz
+    - input: tc/02.in.gz
+      output: tc/02.out.gz
+    - input: tc/03.in.gz
+      output: tc/03.out.gz
+    - input: tc/04.in.gz
+      output: tc/04.out.gz
+    - input: tc/05.in.gz
+      output: tc/05.out.gz
+    - input: tc/06.in.gz
+      output: tc/06.out.gz
+    - input: tc/07.in.gz
+      output: tc/07.out.gz
+    - input: tc/08.in.gz
+      output: tc/08.out.gz
+    - input: tc/09.in.gz
+      output: tc/09.out.gz
+    - input: tc/10.in.gz
+      output: tc/10.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+test_submissions: {}
