@@ -9,7 +9,7 @@ statements:
   en: statement/line-en.pdf
 
 attachments:
-  line.zip: !zip attachment/line.zip
+  line.zip: attachment/line.zip
 
 task_type: OUTPUT_ONLY
 
