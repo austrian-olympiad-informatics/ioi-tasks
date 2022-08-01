@@ -1,0 +1,105 @@
+---
+extends: ../base-batch.yaml
+
+name: SHOES
+long_name: Arranging Shoes
+
+statements:
+  de: statement/shoes-de.pdf
+  en: statement/shoes-en.pdf
+
+attachments:
+  shoes.zip: attachment/shoes.zip
+
+time_limit: 1.0s
+memory_limit: 1024MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 20
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 20
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 15
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 20
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 15
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/grader.java
+  - grader/shoes.h
+
+test_submissions:
+  solution/correct/shoes-ds-java.java: 100
+  solution/correct/shoes-ds_ok.cpp: 100
+  solution/correct/shoes-jonathanirvings.cpp: 100
+  solution/correct/shoes-kuzey_ok.cpp: 100
+  solution/correct/shoes.java: 100
+  solution/failed/shoes-dm_same-size.cpp: 30
+  solution/failed/shoes-dm_same-size.java: 0
+  solution/failed/shoes-jonathanirvings-1.cpp: 10
+  solution/failed/shoes-jonathanirvings-2.cpp: 30
+  solution/failed/shoes-jonathanirvings-3.cpp: 30
+  solution/failed/shoes-jonathanirvings-4-wa.cpp: 0
+  solution/failed/shoes-jonathanirvings-4.cpp: 15
+  solution/failed/shoes-jonathanirvings-5-wa.cpp: 10
+  solution/failed/shoes-jonathanirvings-5.cpp: 50
+  solution/incorrect/shoes-dm_adjacent.cpp: 10
+  solution/incorrect/shoes-dm_heuristic.cpp: 10
+  solution/incorrect/shoes-dm_left-then-right.cpp: 15
+  solution/incorrect/shoes-dm_manual-1.cpp: 10
+  solution/incorrect/shoes-dm_manual-2.cpp: 10
+  solution/incorrect/shoes-incorrect.cpp: 0
+  solution/model_solution/shoes-model.cpp: 100
+  solution/time_limit/shoes-dm_bfs.cpp: 10
+  solution/time_limit/shoes-dm_bfs.java: 0
+  solution/time_limit/shoes-dm_n2.cpp: 50
+  solution/time_limit/shoes-dm_n2.java: 0
+  solution/time_limit/shoes-ds-java-naive.java: 30
+  solution/time_limit/shoes-ds_n2.cpp: 50
+  solution/time_limit/shoes-ds_naive.cpp: 30
+  solution/time_limit/shoes-mruxim-bfs.java: 0
+  solution/time_limit_and_runtime_error/shoes-mruxim-bfs-arr.java: 0
