@@ -1,0 +1,38 @@
+---
+extends: ../base-batch.yaml
+
+name: ABRACADABRA
+long_name: Abracadabra
+
+statements:
+  de: statement/abracadabra-de.pdf
+  en: statement/abracadabra-en.pdf
+
+time_limit: 3.0s
+memory_limit: 512MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 40
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 25
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 25
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+
+test_submissions:
+  # solution/che-fabian-lyck.cpp: 100
+  solution/deu-lukas-michel.cpp: 100
