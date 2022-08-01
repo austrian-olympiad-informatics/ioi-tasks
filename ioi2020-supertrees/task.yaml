@@ -66,3 +66,12 @@ test_submissions:
   # solution/yanhao-st3.java: 100
   # solution/yanhao-st4.java: 100
   # solution/yanhao-st5.java: 100
+
+editor_templates:
+  - attachment/supertrees.cpp
+  - attachment/supertrees.java
+
+test_grader:
+  - attachment/grader.cpp
+  - attachment/grader.java
+  - attachment/supertrees.h

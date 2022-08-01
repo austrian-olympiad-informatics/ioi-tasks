@@ -79,3 +79,12 @@ test_submissions:
   # solution/william-star.java: 100
   solution/zichun-2n.cpp: 76.00
   solution/zichun-partial.cpp: 33.68
+
+editor_templates:
+  - attachment/stations.cpp
+  - attachment/stations.java
+
+test_grader:
+  - attachment/stub.cpp
+  - attachment/stub.java
+  - attachment/stations.h

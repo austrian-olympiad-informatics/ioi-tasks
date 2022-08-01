@@ -121,3 +121,12 @@ test_submissions:
   solution/incorrect/vision-mruxim-wa1.cpp: 12
   solution/incorrect/vision-stress.java: 0
   solution/model_solution/vision-model.cpp: 100
+
+editor_templates:
+  - attachment/vision.cpp
+  - attachment/vision.java
+
+test_grader:
+  - attachment/grader.cpp
+  - attachment/grader.java
+  - attachment/vision.h

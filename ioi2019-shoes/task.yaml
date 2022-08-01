@@ -103,3 +103,12 @@ test_submissions:
   solution/time_limit/shoes-ds_naive.cpp: 30
   solution/time_limit/shoes-mruxim-bfs.java: 0
   solution/time_limit_and_runtime_error/shoes-mruxim-bfs-arr.java: 0
+
+editor_templates:
+  - attachment/shoes.cpp
+  - attachment/shoes.java
+
+test_grader:
+  - attachment/grader.cpp
+  - attachment/grader.java
+  - attachment/shoes.h
