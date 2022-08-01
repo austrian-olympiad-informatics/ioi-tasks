@@ -1,0 +1,123 @@
+---
+extends: ../base-batch.yaml
+
+name: VISION
+long_name: Vision Program
+
+statements:
+  de: statement/vision-de.pdf
+  en: statement/vision-en.pdf
+
+attachments:
+  vision.zip: attachment/vision.zip
+
+time_limit: 1.0s
+memory_limit: 1024MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 11
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 15
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 12
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 8
+    testcases:
+    - input: tc/6-*.in.gz
+      output: tc/6-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 14
+    testcases:
+    - input: tc/7-*.in.gz
+      output: tc/7-*.out.gz
+    - input: tc/minimal-*.in.gz
+      output: tc/minimal-*.out.gz
+  - points: 19
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - grader/grader.cpp
+  - grader/grader.java
+  - grader/vision.h
+
+test_submissions:
+  solution/correct/vision-dm-summation.cpp: 100
+  solution/correct/vision-ds.cpp: 100
+  solution/correct/vision-ge-full.cpp: 100
+  solution/correct/vision-mruxim.cpp: 100
+  solution/correct/vision.java: 0
+  solution/failed/vision-dm-manual.cpp: 10
+  solution/failed/vision-dm-n4.cpp: 33
+  solution/incorrect/stress-random.cpp: 0
+  solution/incorrect/vision-crashtest.cpp: 0
+  solution/incorrect/vision-crashtest1.java: 0
+  solution/incorrect/vision-crashtest2.cpp: 0
+  solution/incorrect/vision-crashtest3.cpp: 0
+  solution/incorrect/vision-crashtest4.cpp: 0
+  solution/incorrect/vision-dm-heuristic-diagonals.cpp: 12
+  solution/incorrect/vision-dm-heuristic-false.cpp: 0
+  solution/incorrect/vision-dm-heuristic-line.cpp: 12
+  solution/incorrect/vision-dm-heuristic-true.cpp: 0
+  solution/incorrect/vision-dm-k_1.cpp: 14
+  solution/incorrect/vision-dm-n2_n2.cpp: 44
+  solution/incorrect/vision-dm-n2_n2.java: 0
+  solution/incorrect/vision-dm-n2_n3.cpp: 44
+  solution/incorrect/vision-dm-n2_n3.java: 0
+  solution/incorrect/vision-dm-n3_n3.cpp: 33
+  solution/incorrect/vision-dm-n3_n3.java: 0
+  solution/incorrect/vision-dm-nlogn.cpp: 59
+  solution/incorrect/vision-dm-side_1.cpp: 12
+  solution/incorrect/vision-dm-top_left.cpp: 8
+  solution/incorrect/vision-ge-nlogn.cpp: 32
+  solution/incorrect/vision-incorrect.java: 0
+  solution/incorrect/vision-mruxim-wa1.cpp: 12
+  solution/incorrect/vision-stress.java: 0
+  solution/model_solution/vision-model.cpp: 100
