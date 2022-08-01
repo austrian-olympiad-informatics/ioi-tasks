@@ -1,0 +1,41 @@
+---
+extends: ../base-batch.yaml
+
+name: HOMEWORK
+long_name: Homework
+
+statements:
+  de: statement/homework-de.pdf
+  en: statement/homework-en.pdf
+
+time_limit: 1.0s
+memory_limit: 512MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 13
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 13
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 30
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 34
+    testcases:
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+
+test_submissions:
+  solution/deu-lukas-michel.cpp: 100
