@@ -1,0 +1,37 @@
+---
+extends: ../base-batch.yaml
+
+name: MEASURES
+long_name: Measures
+
+statements:
+  de: statement/measures-de.pdf
+  en: statement/measures-en.pdf
+
+time_limit: 1.5s
+memory_limit: 512MiB
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 10
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 14
+    testcases:
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 35
+    testcases:
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 41
+    testcases:
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+
+test_submissions:
+  solution/deu-lukas-michel.cpp: 100
