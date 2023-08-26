@@ -1,0 +1,36 @@
+---
+extends: ../base-batch.yaml
+
+name: inflation
+long_name: Inflation
+
+statements:
+  de: statement/statement_de-DE.pdf
+  en: statement/statement_en.pdf
+
+time_limit: 3s
+memory_limit: 1024MiB
+
+subtasks:
+  - points: 14
+    testcases:
+    - input: tc/group1/*.in.gz
+      output: tc/group1/*.ans.gz
+  - points: 28
+    testcases:
+    - input: tc/group2/*.in.gz
+      output: tc/group2/*.ans.gz
+  - points: 19
+    testcases:
+    - input: tc/group3/*.in.gz
+      output: tc/group3/*.ans.gz
+  - points: 23
+    testcases:
+    - input: tc/group4/*.in.gz
+      output: tc/group4/*.ans.gz
+  - points: 16
+    testcases:
+    - input: tc/group5/*.in.gz
+      output: tc/group5/*.ans.gz
+
+test_submissions: {}
