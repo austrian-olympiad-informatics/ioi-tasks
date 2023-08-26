@@ -1,0 +1,32 @@
+---
+extends: ../base-batch.yaml
+
+name: carnival
+long_name: Carnival General
+
+statements:
+  de: statement/statement_de-DE.pdf
+  en: statement/statement_en.pdf
+
+time_limit: 1s
+memory_limit: 1024MiB
+
+sample_solution: !cppcompile fake_solution.cpp
+
+subtasks:
+  - points: 11
+    testcases:
+    - input: tc/group1/*.in.gz
+  - points: 23
+    testcases:
+    - input: tc/group2/*.in.gz
+  - points: 29
+    testcases:
+    - input: tc/group3/*.in.gz
+  - points: 37
+    testcases:
+    - input: tc/group4/*.in.gz
+
+test_submissions: {}
+
+checker: !cppcompile checker/validate.cpp
