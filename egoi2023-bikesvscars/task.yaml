@@ -1,0 +1,42 @@
+---
+extends: ../base-batch.yaml
+
+name: bikesvscars
+long_name: Bikes vs Cars
+
+statements:
+  de: statement/statement_de-DE.pdf
+  en: statement/statement_en.pdf
+
+time_limit: 5s
+memory_limit: 1024MiB
+
+subtasks:
+  - points: 10
+    testcases:
+    - input: tc/group1/*.in.gz
+      output: tc/group1/*.ans.gz
+  - points: 5
+    testcases:
+    - input: tc/group2/*.in.gz
+      output: tc/group2/*.ans.gz
+  - points: 17
+    testcases:
+    - input: tc/group3/*.in.gz
+      output: tc/group3/*.ans.gz
+  - points: 18
+    testcases:
+    - input: tc/group4/*.in.gz
+      output: tc/group4/*.ans.gz
+  - points: 19
+    testcases:
+    - input: tc/group5/*.in.gz
+      output: tc/group5/*.ans.gz
+  - points: 31
+    testcases:
+    - input: tc/group6/*.in.gz
+      output: tc/group6/*.ans.gz
+
+test_submissions: {}
+
+checker: !cppcompile checker/validate.cpp
