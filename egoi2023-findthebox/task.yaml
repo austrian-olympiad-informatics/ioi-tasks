@@ -1,0 +1,30 @@
+---
+extends: ../base-batch.yaml
+
+name: findthebox
+long_name: Find the Box
+
+statements:
+  de: statement/statement_de-DE.pdf
+  en: statement/statement_en.pdf
+
+attachments:
+  testing_tool.py: attachments/testing_tool.py
+
+time_limit: 1s
+memory_limit: 1024MiB
+
+sample_solution: !cppcompile fake_solution.cpp
+
+subtasks:
+  - points: 100
+    testcases:
+    - input: tc/group1/*.in.gz
+
+test_submissions: {}
+
+task_type:
+  type: COMMUNICATION
+  num_processes: 1
+  manager: !cppcompile manager/validate.cpp
+  user_io: std_io
