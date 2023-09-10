@@ -1,0 +1,970 @@
+---
+extends: ../base-batch.yaml
+
+name: closing
+long_name: Closing Time
+
+statements:
+  de: statement/statement-AUT.pdf
+  en: statement/statement-ISC.pdf
+attachments:
+  closing.zip: attachments/closing.zip
+
+time_limit: 1.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+- points: 0
+  testcases:
+  - input: tc/0-01.in.gz
+    output: tc/0-01.out.gz
+- points: 8
+  testcases:
+  - input: tc/1-01.in.gz
+    output: tc/1-01.out.gz
+  - input: tc/1-02.in.gz
+    output: tc/1-02.out.gz
+  - input: tc/1-03.in.gz
+    output: tc/1-03.out.gz
+- points: 9
+  testcases:
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+- points: 12
+  testcases:
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/3-01.in.gz
+    output: tc/3-01.out.gz
+  - input: tc/3-02.in.gz
+    output: tc/3-02.out.gz
+  - input: tc/3-03.in.gz
+    output: tc/3-03.out.gz
+  - input: tc/3-04.in.gz
+    output: tc/3-04.out.gz
+  - input: tc/3-05.in.gz
+    output: tc/3-05.out.gz
+  - input: tc/3-06.in.gz
+    output: tc/3-06.out.gz
+  - input: tc/3-07.in.gz
+    output: tc/3-07.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+  - input: tc/quadline-01.in.gz
+    output: tc/quadline-01.out.gz
+  - input: tc/quadline-02.in.gz
+    output: tc/quadline-02.out.gz
+  - input: tc/quadline-03.in.gz
+    output: tc/quadline-03.out.gz
+  - input: tc/quadline-04.in.gz
+    output: tc/quadline-04.out.gz
+  - input: tc/quadline-05.in.gz
+    output: tc/quadline-05.out.gz
+  - input: tc/quadline-06.in.gz
+    output: tc/quadline-06.out.gz
+- points: 14
+  testcases:
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/3-01.in.gz
+    output: tc/3-01.out.gz
+  - input: tc/3-02.in.gz
+    output: tc/3-02.out.gz
+  - input: tc/3-03.in.gz
+    output: tc/3-03.out.gz
+  - input: tc/3-04.in.gz
+    output: tc/3-04.out.gz
+  - input: tc/3-05.in.gz
+    output: tc/3-05.out.gz
+  - input: tc/3-06.in.gz
+    output: tc/3-06.out.gz
+  - input: tc/3-07.in.gz
+    output: tc/3-07.out.gz
+  - input: tc/4-01.in.gz
+    output: tc/4-01.out.gz
+  - input: tc/4-02.in.gz
+    output: tc/4-02.out.gz
+  - input: tc/4-03.in.gz
+    output: tc/4-03.out.gz
+  - input: tc/4-04.in.gz
+    output: tc/4-04.out.gz
+  - input: tc/4-05.in.gz
+    output: tc/4-05.out.gz
+  - input: tc/4-06.in.gz
+    output: tc/4-06.out.gz
+  - input: tc/4-07.in.gz
+    output: tc/4-07.out.gz
+  - input: tc/4-08.in.gz
+    output: tc/4-08.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+  - input: tc/quadline-01.in.gz
+    output: tc/quadline-01.out.gz
+  - input: tc/quadline-02.in.gz
+    output: tc/quadline-02.out.gz
+  - input: tc/quadline-03.in.gz
+    output: tc/quadline-03.out.gz
+  - input: tc/quadline-04.in.gz
+    output: tc/quadline-04.out.gz
+  - input: tc/quadline-05.in.gz
+    output: tc/quadline-05.out.gz
+  - input: tc/quadline-06.in.gz
+    output: tc/quadline-06.out.gz
+- points: 9
+  testcases:
+  - input: tc/0-01.in.gz
+    output: tc/0-01.out.gz
+  - input: tc/5-01.in.gz
+    output: tc/5-01.out.gz
+  - input: tc/5-02.in.gz
+    output: tc/5-02.out.gz
+  - input: tc/5-03.in.gz
+    output: tc/5-03.out.gz
+  - input: tc/5-04.in.gz
+    output: tc/5-04.out.gz
+  - input: tc/5-05.in.gz
+    output: tc/5-05.out.gz
+  - input: tc/5-06.in.gz
+    output: tc/5-06.out.gz
+  - input: tc/5-07.in.gz
+    output: tc/5-07.out.gz
+  - input: tc/5-08.in.gz
+    output: tc/5-08.out.gz
+  - input: tc/5-09.in.gz
+    output: tc/5-09.out.gz
+  - input: tc/5-10.in.gz
+    output: tc/5-10.out.gz
+  - input: tc/5-11.in.gz
+    output: tc/5-11.out.gz
+  - input: tc/5-12.in.gz
+    output: tc/5-12.out.gz
+  - input: tc/5-13.in.gz
+    output: tc/5-13.out.gz
+  - input: tc/5-14.in.gz
+    output: tc/5-14.out.gz
+  - input: tc/5-15.in.gz
+    output: tc/5-15.out.gz
+  - input: tc/5-16.in.gz
+    output: tc/5-16.out.gz
+  - input: tc/5-17.in.gz
+    output: tc/5-17.out.gz
+  - input: tc/5-18.in.gz
+    output: tc/5-18.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+- points: 11
+  testcases:
+  - input: tc/0-01.in.gz
+    output: tc/0-01.out.gz
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/5-01.in.gz
+    output: tc/5-01.out.gz
+  - input: tc/5-02.in.gz
+    output: tc/5-02.out.gz
+  - input: tc/5-03.in.gz
+    output: tc/5-03.out.gz
+  - input: tc/5-04.in.gz
+    output: tc/5-04.out.gz
+  - input: tc/5-05.in.gz
+    output: tc/5-05.out.gz
+  - input: tc/5-06.in.gz
+    output: tc/5-06.out.gz
+  - input: tc/5-07.in.gz
+    output: tc/5-07.out.gz
+  - input: tc/5-08.in.gz
+    output: tc/5-08.out.gz
+  - input: tc/5-09.in.gz
+    output: tc/5-09.out.gz
+  - input: tc/5-10.in.gz
+    output: tc/5-10.out.gz
+  - input: tc/5-11.in.gz
+    output: tc/5-11.out.gz
+  - input: tc/5-12.in.gz
+    output: tc/5-12.out.gz
+  - input: tc/5-13.in.gz
+    output: tc/5-13.out.gz
+  - input: tc/5-14.in.gz
+    output: tc/5-14.out.gz
+  - input: tc/5-15.in.gz
+    output: tc/5-15.out.gz
+  - input: tc/5-16.in.gz
+    output: tc/5-16.out.gz
+  - input: tc/5-17.in.gz
+    output: tc/5-17.out.gz
+  - input: tc/5-18.in.gz
+    output: tc/5-18.out.gz
+  - input: tc/6-01.in.gz
+    output: tc/6-01.out.gz
+  - input: tc/6-02.in.gz
+    output: tc/6-02.out.gz
+  - input: tc/6-03.in.gz
+    output: tc/6-03.out.gz
+  - input: tc/6-04.in.gz
+    output: tc/6-04.out.gz
+  - input: tc/6-05.in.gz
+    output: tc/6-05.out.gz
+  - input: tc/6-06.in.gz
+    output: tc/6-06.out.gz
+  - input: tc/6-07.in.gz
+    output: tc/6-07.out.gz
+  - input: tc/6-08.in.gz
+    output: tc/6-08.out.gz
+  - input: tc/6-09.in.gz
+    output: tc/6-09.out.gz
+  - input: tc/6-10.in.gz
+    output: tc/6-10.out.gz
+  - input: tc/6-11.in.gz
+    output: tc/6-11.out.gz
+  - input: tc/6-12.in.gz
+    output: tc/6-12.out.gz
+  - input: tc/6-13.in.gz
+    output: tc/6-13.out.gz
+  - input: tc/6-14.in.gz
+    output: tc/6-14.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+  - input: tc/quadline-01.in.gz
+    output: tc/quadline-01.out.gz
+  - input: tc/quadline-02.in.gz
+    output: tc/quadline-02.out.gz
+  - input: tc/quadline-03.in.gz
+    output: tc/quadline-03.out.gz
+  - input: tc/quadline-04.in.gz
+    output: tc/quadline-04.out.gz
+  - input: tc/quadline-05.in.gz
+    output: tc/quadline-05.out.gz
+  - input: tc/quadline-06.in.gz
+    output: tc/quadline-06.out.gz
+- points: 10
+  testcases:
+  - input: tc/0-01.in.gz
+    output: tc/0-01.out.gz
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/3-01.in.gz
+    output: tc/3-01.out.gz
+  - input: tc/3-02.in.gz
+    output: tc/3-02.out.gz
+  - input: tc/3-03.in.gz
+    output: tc/3-03.out.gz
+  - input: tc/3-04.in.gz
+    output: tc/3-04.out.gz
+  - input: tc/3-05.in.gz
+    output: tc/3-05.out.gz
+  - input: tc/3-06.in.gz
+    output: tc/3-06.out.gz
+  - input: tc/3-07.in.gz
+    output: tc/3-07.out.gz
+  - input: tc/5-01.in.gz
+    output: tc/5-01.out.gz
+  - input: tc/5-02.in.gz
+    output: tc/5-02.out.gz
+  - input: tc/5-03.in.gz
+    output: tc/5-03.out.gz
+  - input: tc/5-04.in.gz
+    output: tc/5-04.out.gz
+  - input: tc/5-05.in.gz
+    output: tc/5-05.out.gz
+  - input: tc/5-06.in.gz
+    output: tc/5-06.out.gz
+  - input: tc/5-07.in.gz
+    output: tc/5-07.out.gz
+  - input: tc/5-08.in.gz
+    output: tc/5-08.out.gz
+  - input: tc/5-09.in.gz
+    output: tc/5-09.out.gz
+  - input: tc/5-10.in.gz
+    output: tc/5-10.out.gz
+  - input: tc/5-11.in.gz
+    output: tc/5-11.out.gz
+  - input: tc/5-12.in.gz
+    output: tc/5-12.out.gz
+  - input: tc/5-13.in.gz
+    output: tc/5-13.out.gz
+  - input: tc/5-14.in.gz
+    output: tc/5-14.out.gz
+  - input: tc/5-15.in.gz
+    output: tc/5-15.out.gz
+  - input: tc/5-16.in.gz
+    output: tc/5-16.out.gz
+  - input: tc/5-17.in.gz
+    output: tc/5-17.out.gz
+  - input: tc/5-18.in.gz
+    output: tc/5-18.out.gz
+  - input: tc/6-01.in.gz
+    output: tc/6-01.out.gz
+  - input: tc/6-02.in.gz
+    output: tc/6-02.out.gz
+  - input: tc/6-03.in.gz
+    output: tc/6-03.out.gz
+  - input: tc/6-04.in.gz
+    output: tc/6-04.out.gz
+  - input: tc/6-05.in.gz
+    output: tc/6-05.out.gz
+  - input: tc/6-06.in.gz
+    output: tc/6-06.out.gz
+  - input: tc/6-07.in.gz
+    output: tc/6-07.out.gz
+  - input: tc/6-08.in.gz
+    output: tc/6-08.out.gz
+  - input: tc/6-09.in.gz
+    output: tc/6-09.out.gz
+  - input: tc/6-10.in.gz
+    output: tc/6-10.out.gz
+  - input: tc/6-11.in.gz
+    output: tc/6-11.out.gz
+  - input: tc/6-12.in.gz
+    output: tc/6-12.out.gz
+  - input: tc/6-13.in.gz
+    output: tc/6-13.out.gz
+  - input: tc/6-14.in.gz
+    output: tc/6-14.out.gz
+  - input: tc/7-01.in.gz
+    output: tc/7-01.out.gz
+  - input: tc/7-02.in.gz
+    output: tc/7-02.out.gz
+  - input: tc/7-03.in.gz
+    output: tc/7-03.out.gz
+  - input: tc/7-04.in.gz
+    output: tc/7-04.out.gz
+  - input: tc/7-05.in.gz
+    output: tc/7-05.out.gz
+  - input: tc/7-06.in.gz
+    output: tc/7-06.out.gz
+  - input: tc/7-07.in.gz
+    output: tc/7-07.out.gz
+  - input: tc/7-08.in.gz
+    output: tc/7-08.out.gz
+  - input: tc/7-09.in.gz
+    output: tc/7-09.out.gz
+  - input: tc/7-10.in.gz
+    output: tc/7-10.out.gz
+  - input: tc/7-11.in.gz
+    output: tc/7-11.out.gz
+  - input: tc/7-12.in.gz
+    output: tc/7-12.out.gz
+  - input: tc/7-13.in.gz
+    output: tc/7-13.out.gz
+  - input: tc/7-14.in.gz
+    output: tc/7-14.out.gz
+  - input: tc/7-15.in.gz
+    output: tc/7-15.out.gz
+  - input: tc/7-16.in.gz
+    output: tc/7-16.out.gz
+  - input: tc/7-17.in.gz
+    output: tc/7-17.out.gz
+  - input: tc/7-18.in.gz
+    output: tc/7-18.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+  - input: tc/quadline-01.in.gz
+    output: tc/quadline-01.out.gz
+  - input: tc/quadline-02.in.gz
+    output: tc/quadline-02.out.gz
+  - input: tc/quadline-03.in.gz
+    output: tc/quadline-03.out.gz
+  - input: tc/quadline-04.in.gz
+    output: tc/quadline-04.out.gz
+  - input: tc/quadline-05.in.gz
+    output: tc/quadline-05.out.gz
+  - input: tc/quadline-06.in.gz
+    output: tc/quadline-06.out.gz
+- points: 10
+  testcases:
+  - input: tc/0-01.in.gz
+    output: tc/0-01.out.gz
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/3-01.in.gz
+    output: tc/3-01.out.gz
+  - input: tc/3-02.in.gz
+    output: tc/3-02.out.gz
+  - input: tc/3-03.in.gz
+    output: tc/3-03.out.gz
+  - input: tc/3-04.in.gz
+    output: tc/3-04.out.gz
+  - input: tc/3-05.in.gz
+    output: tc/3-05.out.gz
+  - input: tc/3-06.in.gz
+    output: tc/3-06.out.gz
+  - input: tc/3-07.in.gz
+    output: tc/3-07.out.gz
+  - input: tc/4-01.in.gz
+    output: tc/4-01.out.gz
+  - input: tc/4-02.in.gz
+    output: tc/4-02.out.gz
+  - input: tc/4-03.in.gz
+    output: tc/4-03.out.gz
+  - input: tc/4-04.in.gz
+    output: tc/4-04.out.gz
+  - input: tc/4-05.in.gz
+    output: tc/4-05.out.gz
+  - input: tc/4-06.in.gz
+    output: tc/4-06.out.gz
+  - input: tc/4-07.in.gz
+    output: tc/4-07.out.gz
+  - input: tc/4-08.in.gz
+    output: tc/4-08.out.gz
+  - input: tc/5-01.in.gz
+    output: tc/5-01.out.gz
+  - input: tc/5-02.in.gz
+    output: tc/5-02.out.gz
+  - input: tc/5-03.in.gz
+    output: tc/5-03.out.gz
+  - input: tc/5-04.in.gz
+    output: tc/5-04.out.gz
+  - input: tc/5-05.in.gz
+    output: tc/5-05.out.gz
+  - input: tc/5-06.in.gz
+    output: tc/5-06.out.gz
+  - input: tc/5-07.in.gz
+    output: tc/5-07.out.gz
+  - input: tc/5-08.in.gz
+    output: tc/5-08.out.gz
+  - input: tc/5-09.in.gz
+    output: tc/5-09.out.gz
+  - input: tc/5-10.in.gz
+    output: tc/5-10.out.gz
+  - input: tc/5-11.in.gz
+    output: tc/5-11.out.gz
+  - input: tc/5-12.in.gz
+    output: tc/5-12.out.gz
+  - input: tc/5-13.in.gz
+    output: tc/5-13.out.gz
+  - input: tc/5-14.in.gz
+    output: tc/5-14.out.gz
+  - input: tc/5-15.in.gz
+    output: tc/5-15.out.gz
+  - input: tc/5-16.in.gz
+    output: tc/5-16.out.gz
+  - input: tc/5-17.in.gz
+    output: tc/5-17.out.gz
+  - input: tc/5-18.in.gz
+    output: tc/5-18.out.gz
+  - input: tc/6-01.in.gz
+    output: tc/6-01.out.gz
+  - input: tc/6-02.in.gz
+    output: tc/6-02.out.gz
+  - input: tc/6-03.in.gz
+    output: tc/6-03.out.gz
+  - input: tc/6-04.in.gz
+    output: tc/6-04.out.gz
+  - input: tc/6-05.in.gz
+    output: tc/6-05.out.gz
+  - input: tc/6-06.in.gz
+    output: tc/6-06.out.gz
+  - input: tc/6-07.in.gz
+    output: tc/6-07.out.gz
+  - input: tc/6-08.in.gz
+    output: tc/6-08.out.gz
+  - input: tc/6-09.in.gz
+    output: tc/6-09.out.gz
+  - input: tc/6-10.in.gz
+    output: tc/6-10.out.gz
+  - input: tc/6-11.in.gz
+    output: tc/6-11.out.gz
+  - input: tc/6-12.in.gz
+    output: tc/6-12.out.gz
+  - input: tc/6-13.in.gz
+    output: tc/6-13.out.gz
+  - input: tc/6-14.in.gz
+    output: tc/6-14.out.gz
+  - input: tc/7-01.in.gz
+    output: tc/7-01.out.gz
+  - input: tc/7-02.in.gz
+    output: tc/7-02.out.gz
+  - input: tc/7-03.in.gz
+    output: tc/7-03.out.gz
+  - input: tc/7-04.in.gz
+    output: tc/7-04.out.gz
+  - input: tc/7-05.in.gz
+    output: tc/7-05.out.gz
+  - input: tc/7-06.in.gz
+    output: tc/7-06.out.gz
+  - input: tc/7-07.in.gz
+    output: tc/7-07.out.gz
+  - input: tc/7-08.in.gz
+    output: tc/7-08.out.gz
+  - input: tc/7-09.in.gz
+    output: tc/7-09.out.gz
+  - input: tc/7-10.in.gz
+    output: tc/7-10.out.gz
+  - input: tc/7-11.in.gz
+    output: tc/7-11.out.gz
+  - input: tc/7-12.in.gz
+    output: tc/7-12.out.gz
+  - input: tc/7-13.in.gz
+    output: tc/7-13.out.gz
+  - input: tc/7-14.in.gz
+    output: tc/7-14.out.gz
+  - input: tc/7-15.in.gz
+    output: tc/7-15.out.gz
+  - input: tc/7-16.in.gz
+    output: tc/7-16.out.gz
+  - input: tc/7-17.in.gz
+    output: tc/7-17.out.gz
+  - input: tc/7-18.in.gz
+    output: tc/7-18.out.gz
+  - input: tc/8-01.in.gz
+    output: tc/8-01.out.gz
+  - input: tc/8-02.in.gz
+    output: tc/8-02.out.gz
+  - input: tc/8-03.in.gz
+    output: tc/8-03.out.gz
+  - input: tc/8-04.in.gz
+    output: tc/8-04.out.gz
+  - input: tc/8-05.in.gz
+    output: tc/8-05.out.gz
+  - input: tc/8-06.in.gz
+    output: tc/8-06.out.gz
+  - input: tc/8-07.in.gz
+    output: tc/8-07.out.gz
+  - input: tc/8-08.in.gz
+    output: tc/8-08.out.gz
+  - input: tc/8-09.in.gz
+    output: tc/8-09.out.gz
+  - input: tc/8-10.in.gz
+    output: tc/8-10.out.gz
+  - input: tc/8-11.in.gz
+    output: tc/8-11.out.gz
+  - input: tc/8-12.in.gz
+    output: tc/8-12.out.gz
+  - input: tc/8-13.in.gz
+    output: tc/8-13.out.gz
+  - input: tc/8-14.in.gz
+    output: tc/8-14.out.gz
+  - input: tc/8-15.in.gz
+    output: tc/8-15.out.gz
+  - input: tc/8-16.in.gz
+    output: tc/8-16.out.gz
+  - input: tc/8-17.in.gz
+    output: tc/8-17.out.gz
+  - input: tc/8-18.in.gz
+    output: tc/8-18.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+  - input: tc/quadline-01.in.gz
+    output: tc/quadline-01.out.gz
+  - input: tc/quadline-02.in.gz
+    output: tc/quadline-02.out.gz
+  - input: tc/quadline-03.in.gz
+    output: tc/quadline-03.out.gz
+  - input: tc/quadline-04.in.gz
+    output: tc/quadline-04.out.gz
+  - input: tc/quadline-05.in.gz
+    output: tc/quadline-05.out.gz
+  - input: tc/quadline-06.in.gz
+    output: tc/quadline-06.out.gz
+- points: 17
+  testcases:
+  - input: tc/0-01.in.gz
+    output: tc/0-01.out.gz
+  - input: tc/2-01.in.gz
+    output: tc/2-01.out.gz
+  - input: tc/2-02.in.gz
+    output: tc/2-02.out.gz
+  - input: tc/2-03.in.gz
+    output: tc/2-03.out.gz
+  - input: tc/2-04.in.gz
+    output: tc/2-04.out.gz
+  - input: tc/2-05.in.gz
+    output: tc/2-05.out.gz
+  - input: tc/2-06.in.gz
+    output: tc/2-06.out.gz
+  - input: tc/3-01.in.gz
+    output: tc/3-01.out.gz
+  - input: tc/3-02.in.gz
+    output: tc/3-02.out.gz
+  - input: tc/3-03.in.gz
+    output: tc/3-03.out.gz
+  - input: tc/3-04.in.gz
+    output: tc/3-04.out.gz
+  - input: tc/3-05.in.gz
+    output: tc/3-05.out.gz
+  - input: tc/3-06.in.gz
+    output: tc/3-06.out.gz
+  - input: tc/3-07.in.gz
+    output: tc/3-07.out.gz
+  - input: tc/4-01.in.gz
+    output: tc/4-01.out.gz
+  - input: tc/4-02.in.gz
+    output: tc/4-02.out.gz
+  - input: tc/4-03.in.gz
+    output: tc/4-03.out.gz
+  - input: tc/4-04.in.gz
+    output: tc/4-04.out.gz
+  - input: tc/4-05.in.gz
+    output: tc/4-05.out.gz
+  - input: tc/4-06.in.gz
+    output: tc/4-06.out.gz
+  - input: tc/4-07.in.gz
+    output: tc/4-07.out.gz
+  - input: tc/4-08.in.gz
+    output: tc/4-08.out.gz
+  - input: tc/5-01.in.gz
+    output: tc/5-01.out.gz
+  - input: tc/5-02.in.gz
+    output: tc/5-02.out.gz
+  - input: tc/5-03.in.gz
+    output: tc/5-03.out.gz
+  - input: tc/5-04.in.gz
+    output: tc/5-04.out.gz
+  - input: tc/5-05.in.gz
+    output: tc/5-05.out.gz
+  - input: tc/5-06.in.gz
+    output: tc/5-06.out.gz
+  - input: tc/5-07.in.gz
+    output: tc/5-07.out.gz
+  - input: tc/5-08.in.gz
+    output: tc/5-08.out.gz
+  - input: tc/5-09.in.gz
+    output: tc/5-09.out.gz
+  - input: tc/5-10.in.gz
+    output: tc/5-10.out.gz
+  - input: tc/5-11.in.gz
+    output: tc/5-11.out.gz
+  - input: tc/5-12.in.gz
+    output: tc/5-12.out.gz
+  - input: tc/5-13.in.gz
+    output: tc/5-13.out.gz
+  - input: tc/5-14.in.gz
+    output: tc/5-14.out.gz
+  - input: tc/5-15.in.gz
+    output: tc/5-15.out.gz
+  - input: tc/5-16.in.gz
+    output: tc/5-16.out.gz
+  - input: tc/5-17.in.gz
+    output: tc/5-17.out.gz
+  - input: tc/5-18.in.gz
+    output: tc/5-18.out.gz
+  - input: tc/6-01.in.gz
+    output: tc/6-01.out.gz
+  - input: tc/6-02.in.gz
+    output: tc/6-02.out.gz
+  - input: tc/6-03.in.gz
+    output: tc/6-03.out.gz
+  - input: tc/6-04.in.gz
+    output: tc/6-04.out.gz
+  - input: tc/6-05.in.gz
+    output: tc/6-05.out.gz
+  - input: tc/6-06.in.gz
+    output: tc/6-06.out.gz
+  - input: tc/6-07.in.gz
+    output: tc/6-07.out.gz
+  - input: tc/6-08.in.gz
+    output: tc/6-08.out.gz
+  - input: tc/6-09.in.gz
+    output: tc/6-09.out.gz
+  - input: tc/6-10.in.gz
+    output: tc/6-10.out.gz
+  - input: tc/6-11.in.gz
+    output: tc/6-11.out.gz
+  - input: tc/6-12.in.gz
+    output: tc/6-12.out.gz
+  - input: tc/6-13.in.gz
+    output: tc/6-13.out.gz
+  - input: tc/6-14.in.gz
+    output: tc/6-14.out.gz
+  - input: tc/7-01.in.gz
+    output: tc/7-01.out.gz
+  - input: tc/7-02.in.gz
+    output: tc/7-02.out.gz
+  - input: tc/7-03.in.gz
+    output: tc/7-03.out.gz
+  - input: tc/7-04.in.gz
+    output: tc/7-04.out.gz
+  - input: tc/7-05.in.gz
+    output: tc/7-05.out.gz
+  - input: tc/7-06.in.gz
+    output: tc/7-06.out.gz
+  - input: tc/7-07.in.gz
+    output: tc/7-07.out.gz
+  - input: tc/7-08.in.gz
+    output: tc/7-08.out.gz
+  - input: tc/7-09.in.gz
+    output: tc/7-09.out.gz
+  - input: tc/7-10.in.gz
+    output: tc/7-10.out.gz
+  - input: tc/7-11.in.gz
+    output: tc/7-11.out.gz
+  - input: tc/7-12.in.gz
+    output: tc/7-12.out.gz
+  - input: tc/7-13.in.gz
+    output: tc/7-13.out.gz
+  - input: tc/7-14.in.gz
+    output: tc/7-14.out.gz
+  - input: tc/7-15.in.gz
+    output: tc/7-15.out.gz
+  - input: tc/7-16.in.gz
+    output: tc/7-16.out.gz
+  - input: tc/7-17.in.gz
+    output: tc/7-17.out.gz
+  - input: tc/7-18.in.gz
+    output: tc/7-18.out.gz
+  - input: tc/8-01.in.gz
+    output: tc/8-01.out.gz
+  - input: tc/8-02.in.gz
+    output: tc/8-02.out.gz
+  - input: tc/8-03.in.gz
+    output: tc/8-03.out.gz
+  - input: tc/8-04.in.gz
+    output: tc/8-04.out.gz
+  - input: tc/8-05.in.gz
+    output: tc/8-05.out.gz
+  - input: tc/8-06.in.gz
+    output: tc/8-06.out.gz
+  - input: tc/8-07.in.gz
+    output: tc/8-07.out.gz
+  - input: tc/8-08.in.gz
+    output: tc/8-08.out.gz
+  - input: tc/8-09.in.gz
+    output: tc/8-09.out.gz
+  - input: tc/8-10.in.gz
+    output: tc/8-10.out.gz
+  - input: tc/8-11.in.gz
+    output: tc/8-11.out.gz
+  - input: tc/8-12.in.gz
+    output: tc/8-12.out.gz
+  - input: tc/8-13.in.gz
+    output: tc/8-13.out.gz
+  - input: tc/8-14.in.gz
+    output: tc/8-14.out.gz
+  - input: tc/8-15.in.gz
+    output: tc/8-15.out.gz
+  - input: tc/8-16.in.gz
+    output: tc/8-16.out.gz
+  - input: tc/8-17.in.gz
+    output: tc/8-17.out.gz
+  - input: tc/8-18.in.gz
+    output: tc/8-18.out.gz
+  - input: tc/9-01.in.gz
+    output: tc/9-01.out.gz
+  - input: tc/9-02.in.gz
+    output: tc/9-02.out.gz
+  - input: tc/9-03.in.gz
+    output: tc/9-03.out.gz
+  - input: tc/9-04.in.gz
+    output: tc/9-04.out.gz
+  - input: tc/9-05.in.gz
+    output: tc/9-05.out.gz
+  - input: tc/9-06.in.gz
+    output: tc/9-06.out.gz
+  - input: tc/9-07.in.gz
+    output: tc/9-07.out.gz
+  - input: tc/9-08.in.gz
+    output: tc/9-08.out.gz
+  - input: tc/9-09.in.gz
+    output: tc/9-09.out.gz
+  - input: tc/9-10.in.gz
+    output: tc/9-10.out.gz
+  - input: tc/9-11.in.gz
+    output: tc/9-11.out.gz
+  - input: tc/9-12.in.gz
+    output: tc/9-12.out.gz
+  - input: tc/9-13.in.gz
+    output: tc/9-13.out.gz
+  - input: tc/9-14.in.gz
+    output: tc/9-14.out.gz
+  - input: tc/9-15.in.gz
+    output: tc/9-15.out.gz
+  - input: tc/9-16.in.gz
+    output: tc/9-16.out.gz
+  - input: tc/9-17.in.gz
+    output: tc/9-17.out.gz
+  - input: tc/9-18.in.gz
+    output: tc/9-18.out.gz
+  - input: tc/9-19.in.gz
+    output: tc/9-19.out.gz
+  - input: tc/expline-01.in.gz
+    output: tc/expline-01.out.gz
+  - input: tc/expline-02.in.gz
+    output: tc/expline-02.out.gz
+  - input: tc/expline-03.in.gz
+    output: tc/expline-03.out.gz
+  - input: tc/expline-04.in.gz
+    output: tc/expline-04.out.gz
+  - input: tc/expline-05.in.gz
+    output: tc/expline-05.out.gz
+  - input: tc/quadline-01.in.gz
+    output: tc/quadline-01.out.gz
+  - input: tc/quadline-02.in.gz
+    output: tc/quadline-02.out.gz
+  - input: tc/quadline-03.in.gz
+    output: tc/quadline-03.out.gz
+  - input: tc/quadline-04.in.gz
+    output: tc/quadline-04.out.gz
+  - input: tc/quadline-05.in.gz
+    output: tc/quadline-05.out.gz
+  - input: tc/quadline-06.in.gz
+    output: tc/quadline-06.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - graders/grader.cpp
+  - graders/closing.h
+
+test_submissions:
+  solutions/correct/solution-ayaze-brute-linear-knapsack.cpp: 51
+  solutions/correct/solution-ayaze-knapsack-cube.cpp: 29
+  solutions/correct/solution-ayaze-knapsack-optimized.cpp: 51
+  solutions/correct/solution-ayaze-linear-leftover.cpp: 75
+  solutions/correct/solution-ayaze-logsquared.cpp: 100
+  solutions/correct/solution-ayaze-quadratic-leftover.cpp: 51
+  solutions/correct/solution-da.cpp: 100
+  solutions/correct/solution-gyp.cpp: 100
+  solutions/correct/solution-jonathanirvings.cpp: 100
+  solutions/correct/solution-vp-greedy.cpp: 100
+  solutions/correct/solution-vp-subtask1.cpp: 8
+  solutions/correct/solution-wiwitrifai-set.cpp: 100
+  solutions/correct/solution-wiwitrifai.cpp: 100
+  solutions/failed/solution-ayaze-brute-common-nodes.cpp: 9
+  solutions/failed/solution-ayaze-line-brute-common-nodes.cpp: 21
+  solutions/failed/solution-ayaze-line-brute-each-endpoint.cpp: 9
+  solutions/failed/solution-ayaze-line-brute-linear-common.cpp: 35
+  solutions/failed/solution-ayaze-line-optimized-common-nodes.cpp: 35
+  solutions/failed/solution-jonathanirvings-quadratic.cpp: 52
+  solutions/failed/solution-vp-greedy-wa2-opt.cpp: 35
+  solutions/failed/solution-vp-greedy-wa2.cpp: 35
+  solutions/failed/solution-wiwitrifai-tle.cpp: 43
+  solutions/failed/wa-ayaze-pure-knapsack.cpp: 0
+  solutions/incorrect/solution-TB-line-wa.cpp: 8
+  solutions/incorrect/solution-jonathanirvings-wa.cpp: 43
+  solutions/incorrect/solution-vp-greedy-wa0.cpp: 8
+  solutions/incorrect/solution-vp-greedy-wa1.cpp: 43
+  solutions/incorrect/solution-vp-greedy-wa3-opt.cpp: 8
+  solutions/incorrect/solution-vp-greedy-wa3.cpp: 8
+  solutions/incorrect/solution-vp-greedy-wa4-opt.cpp: 43
+  solutions/incorrect/solution-vp-greedy-wa4.cpp: 43
+  solutions/incorrect/solution-vp-greedy-wa5.cpp: 43
+  solutions/incorrect/wa-ayaze-always-have-common.cpp: 0
+  solutions/incorrect/wa-ayaze-always-take-q.cpp: 43
+  solutions/incorrect/wa-ayaze-odd-q-clamp.cpp: 43
+  solutions/incorrect/wa-ayaze-odd-q-roundup.cpp: 43
+  solutions/incorrect/wa-ayaze-odd-q.cpp: 8
+  solutions/incorrect/wa-ayaze-sort-by-q.cpp: 43
+  solutions/model_solution/solution-ayaze.cpp: 100
+  solutions/time_limit/solution-jonathanirvings-fourth.cpp: 29
+  solutions/time_limit_and_runtime_error/solution-ayaze-brute-common-knapsack.cpp: 29
