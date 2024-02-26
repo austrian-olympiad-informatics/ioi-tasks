@@ -1,0 +1,73 @@
+---
+extends: ../base-batch.yaml
+
+name: SOCCER
+long_name: Soccer Stadium
+
+statements:
+  en: statement/soccer-en.pdf
+attachments:
+  soccer.zip: attachments/soccer.zip
+
+time_limit: 3.0s
+memory_limit: 2048MiB
+
+score_options:
+  decimal_places: 2
+
+subtasks:
+  - points: 0
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+  - points: 6
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+  - points: 8
+    testcases:
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+  - points: 22
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/2-*.in.gz
+      output: tc/2-*.out.gz
+    - input: tc/3-*.in.gz
+      output: tc/3-*.out.gz
+  - points: 18
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+  - points: 16
+    testcases:
+    - input: tc/0-*.in.gz
+      output: tc/0-*.out.gz
+    - input: tc/1-*.in.gz
+      output: tc/1-*.out.gz
+    - input: tc/4-*.in.gz
+      output: tc/4-*.out.gz
+    - input: tc/5-*.in.gz
+      output: tc/5-*.out.gz
+  - points: 30
+    testcases:
+    - input: tc/*.in.gz
+      output: tc/*.out.gz
+
+checker: !cppcompile checker/checker.cpp
+
+grader:
+  - graders/grader.cpp
+  - graders/soccer.h
+
+test_submissions:
+  solutions/model_solution/solution.cpp: 100
